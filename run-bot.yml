@@ -1,0 +1,29 @@
+name: Run Auto Commit Bot
+
+on:
+  schedule:
+    - cron: '0 3,11,19 * * *'  # Every day at 3AM, 11AM, 7PM UTC
+  workflow_dispatch:  # Optional: allow manual runs
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install openai
+
+      - name: Run the bot
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python auto_commit_bot.py
