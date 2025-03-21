@@ -45,8 +45,8 @@ def save_code_to_file(code):
 # Step 3: Git add, commit, and push
 def git_commit_and_push(filename):
     try:
-        subprocess.run(["git", "config", "--global", "user.name", "your-github-username"], check=True)
-        subprocess.run(["git", "config", "--global", "user.email", "your-email@example.com"], check=True)
+        subprocess.run(["git", "config", "--global", "user.name", "vinishdas"], check=True)
+        subprocess.run(["git", "config", "--global", "user.email", "dvinish6669@gmail.com"], check=True)
 
         subprocess.run(["git", "add", filename], check=True)
         subprocess.run(["git", "commit", "-m", f"🤖 Auto-commit: add {filename}"], check=True)
