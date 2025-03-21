@@ -17,10 +17,6 @@ def generate_sample_code():
         model="google/gemma-2-2b-it",  # or "gpt-4o" if your key supports it
         messages=[
             {
-                "role": "system",
-                "content": "You are a helpful assistant that writes short Python code samples for learning."
-            },
-            {
                 "role": "user",
                 "content": "Generate a simple Python function that checks if a number is a palindrome."
             }
