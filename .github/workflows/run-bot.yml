@@ -19,14 +19,11 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-
-          pip install huggingface_hub
+        run: pip install huggingface_hub
 
       - name: Run the bot
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GH_PAT: ${{ secrets.GH_PAT }}
-          HF: ${{secrets.HF}}
- 
+          HF: ${{ secrets.HF }}
         run: python auto_commit_bot.py
