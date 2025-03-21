@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install openai
+          pip install huggingface_hub
 
       - name: Run the bot
         env:
