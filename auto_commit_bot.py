@@ -15,7 +15,8 @@ def generate_sample_code():
     messages = [
         {
             "role": "user",
-            "content": "Generate a simple Python function that checks if a number is a palindrome."
+            "content":"Write only Python code (no explanation, no markdown). Generate a clean Python function that is unique and differnt"
+
         }
     ]
 
