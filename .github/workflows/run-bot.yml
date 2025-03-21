@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+
           pip install huggingface_hub
 
       - name: Run the bot
@@ -27,4 +28,5 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GH_PAT: ${{ secrets.GH_PAT }}
           HF: ${{secrets.HF}}
+ 
         run: python auto_commit_bot.py
